@@ -1,3 +1,411 @@
 <!DOCTYPE html>
-<!-- trimmed content to fit into portfolio/index.html -->
-<html><head><title>Rubina Portfolio</title><link rel="stylesheet" href="style.css"></head><body><h1>Rubina Portfolio</h1><img src="assets/Rubina_random.png" alt="Rubina"><p>This is a placeholder for the full HTML content.</p></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rubina Ahmed Mahar Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Rubina Ahmed Mahar's data analytics portfolio. Showcasing certifications, projects, skills, and more.">
+  <meta property="og:title" content="Rubina Ahmed Mahar Portfolio">
+  <meta property="og:image" content="assets/Rubina_random.png">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="bg-gradient-to-r from-[#E0F7FA] to-[#AFDDE5] text-[#003135] font-sans relative">
+  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-[#0FAA4F] z-50"></div>
+  <header class="bg-[#024950] text-white py-4 shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-white animate-typing overflow-hidden whitespace-nowrap border-r-4 border-white pr-4" style="animation: typing 3s steps(30, end) infinite alternate;">Rubina Mahar</h1>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#strengths" class="hover:underline">Strengths</a>
+        <a href="#education" class="hover:underline">Education</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <button onclick="toggleTheme()" class="bg-[#0FAA4F] px-3 py-1 rounded text-sm hover:bg-[#003135] transition">Toggle Theme</button>
+      </nav>
+    </div>
+  </header>
+  <main class="max-w-6xl mx-auto px-6 py-28 space-y-20 transition-all duration-300">
+    <section id="about" data-aos="zoom-in" data-aos-duration="1000" class="text-center bg-fixed bg-center bg-cover">
+      <img src="assets/Rubina_random.png" alt="Rubina Ahmed Mahar" class="w-32 h-32 mx-auto rounded-full shadow-lg border-4 border-[#0FAA4F] mb-4" />
+      <h2 class="text-4xl font-bold mb-4">👩‍💼 About Me</h2>
+      <p class="max-w-3xl mx-auto text-lg text-[#003135] leading-relaxed">
+        I am <strong class="text-[#0FAA4F]">Rubina Ahmed Mahar</strong>, a BBA student passionate about using data to drive smarter business decisions. I specialize in extracting insights from complex datasets and presenting them in clear, actionable formats using tools like Python, SQL, Power BI, and Excel. With a strong foundation in data analytics and a natural curiosity for problem-solving, I aim to bridge the gap between data and strategy to fuel growth, efficiency, and innovation.
+      </p>
+    </section>
+
+<!-- Strengths Section -->
+<section id="strengths" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-4 flex items-center gap-2 animate__animated animate__fadeInDown">
+    <i class="fas fa-dumbbell text-[#0FAA4F]"></i> Strengths
+  </h2>
+  <ul class="grid md:grid-cols-2 gap-4 text-lg">
+    <li>✅ Analytical Thinking</li>
+    <li>✅ Attention to Detail</li>
+    <li>✅ Communication & Leadership</li>
+    <li>✅ Problem Solving under Pressure</li>
+    <li>✅ Adaptability in Remote Teams</li>
+    <li>✅ Passion for Continuous Learning</li>
+  </ul>
+</section>
+<!-- Skills Section -->
+<section id="skills" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-tools text-[#0FAA4F]"></i> Skills
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Circular Meters -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="text-center">
+        <canvas id="pythonChart" width="100" height="100"></canvas>
+        <p class="mt-2">Python</p>
+      </div>
+      <div class="text-center">
+        <canvas id="sqlChart" width="100" height="100"></canvas>
+        <p class="mt-2">SQL</p>
+      </div>
+      <div class="text-center">
+        <canvas id="excelChart" width="100" height="100"></canvas>
+        <p class="mt-2">Excel</p>
+      </div>
+      <div class="text-center">
+        <canvas id="powerbiChart" width="100" height="100"></canvas>
+        <p class="mt-2">Power BI</p>
+      </div>
+    </div>
+    <!-- Soft Skills with Progress Bars -->
+    <div class="space-y-4">
+      <div>
+        <label class="font-semibold">Communication</label>
+        <div class="relative w-full bg-gray-300 rounded h-4">
+          <div class="bg-[#0FAA4F] h-4 rounded" style="width: 90%;" title="90%"></div>
+        </div>
+      </div>
+      <div>
+        <label class="font-semibold">Problem Solving</label>
+        <div class="relative w-full bg-gray-300 rounded h-4">
+          <div class="bg-[#0FAA4F] h-4 rounded" style="width: 85%;" title="85%"></div>
+        </div>
+      </div>
+      <div>
+        <label class="font-semibold">Teamwork</label>
+        <div class="relative w-full bg-gray-300 rounded h-4">
+          <div class="bg-[#0FAA4F] h-4 rounded" style="width: 80%;" title="80%"></div>
+        </div>
+      </div>
+      <div>
+        <label class="font-semibold">Time Management</label>
+        <div class="relative w-full bg-gray-300 rounded h-4">
+          <div class="bg-[#0FAA4F] h-4 rounded" style="width: 75%;" title="75%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const createDoughnut = (id, percent) => {
+    new Chart(document.getElementById(id), {
+      type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [percent, 100 - percent],
+          backgroundColor: ['#0FAA4F', '#E5E7EB'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        cutout: '70%',
+        plugins: { legend: { display: false } },
+        responsive: false,
+        maintainAspectRatio: false
+      }
+    });
+  };
+  document.addEventListener('DOMContentLoaded', () => {
+    createDoughnut('pythonChart', 95);
+    createDoughnut('sqlChart', 90);
+    createDoughnut('excelChart', 85);
+    createDoughnut('powerbiChart', 80);
+  });
+</script>
+
+<!-- Education Section -->
+<section id="education" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-user-graduate text-[#0FAA4F]"></i> Education
+  </h2>
+  <div class="bg-white rounded-lg shadow p-4 text-[#003135]">
+    <h3 class="text-xl font-semibold">Bachelor of Business Administration</h3>
+    <p class="text-sm">Shaheed Zulfikar Ali Bhutto Institute of Science and Technology (SZABIST)</p>
+    <p class="text-sm">GPA: 3.9 / 4.0</p>
+    <p class="text-sm">2021 – Present</p>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-certificate text-[#0FAA4F]"></i> Certifications
+  </h2>
+  <div class="flex gap-4 overflow-x-auto pb-2">
+    <span class="badge bg-[#0FAA4F] text-white px-4 py-2 rounded-full">Google Data Analytics</span>
+    <span class="badge bg-[#024950] text-white px-4 py-2 rounded-full">CS50 Python</span>
+    <span class="badge bg-[#964734] text-white px-4 py-2 rounded-full">McKinsey Forward</span>
+    <span class="badge bg-[#003135] text-white px-4 py-2 rounded-full">Excel for Business</span>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section id="timeline" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-stream text-[#0FAA4F]"></i> Journey
+  </h2>
+  <div class="border-l-4 border-[#0FAA4F] pl-6 space-y-8">
+    <div class="relative">
+      <span class="absolute -left-3 top-1.5 w-6 h-6 rounded-full bg-[#0FAA4F] border-4 border-white"></span>
+      <h3 class="text-xl font-semibold">SZABIST – BBA</h3>
+      <time class="text-sm text-gray-500">2021 – Present</time>
+      <p class="text-sm">GPA: 3.9 – Specialized in Data Analytics, participated in business data competitions and research.</p>
+    </div>
+    <div class="relative">
+      <span class="absolute -left-3 top-1.5 w-6 h-6 rounded-full bg-[#0FAA4F] border-4 border-white"></span>
+      <h3 class="text-xl font-semibold">Oigetit.ai – Data Analyst Intern</h3>
+      <time class="text-sm text-gray-500">Feb 2024 – Apr 2024</time>
+      <p class="text-sm">Worked on credibility analysis using Python and dashboards for media accuracy insights.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-briefcase text-[#0FAA4F]"></i> Experience
+  </h2>
+  <div class="space-y-4">
+    <div class="bg-white rounded shadow p-4">
+      <h3 class="text-xl font-semibold">Data Analyst Intern – Oigetit.ai</h3>
+      <p class="text-sm text-gray-600">Feb 2024 – Apr 2024</p>
+      <p class="text-sm">Worked on AI-powered news credibility detection, conducted sentiment analysis using Python, and visualized insights for real-time dashboards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-project-diagram text-[#0FAA4F]"></i> Projects
+  </h2>
+  <div class="space-y-4">
+    <details class="bg-white p-4 rounded shadow">
+      <summary class="font-semibold cursor-pointer">📊 Suicide Rate EDA</summary>
+      <p class="text-sm mt-2">Analyzed suicide rates globally from 2000–2015. Tools: Python, Pandas, Seaborn. <a href="https://github.com/RubinaAMahar/PythonProjectsDA" class="text-blue-500" target="_blank">GitHub Link</a></p>
+    </details>
+    <details class="bg-white p-4 rounded shadow">
+      <summary class="font-semibold cursor-pointer">🌍 Youth Unemployment EDA</summary>
+      <embed src="assets/A_Global_Youth_Unemployment_Analysis.pdf" type="application/pdf" width="100%" height="300px" class="mt-2 rounded" />
+    </details>
+    <details class="bg-white p-4 rounded shadow">
+      <summary class="font-semibold cursor-pointer">💊 Pharmaceutical Supply Chain</summary>
+      <embed src="assets/pharma.pdf" type="application/pdf" width="100%" height="300px" class="mt-2 rounded" />
+    </details>
+  </div>
+</section>
+
+<!-- Research Section -->
+<section id="research" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-flask text-[#0FAA4F]"></i> Research
+  </h2>
+  <div class="bg-white rounded-lg shadow p-4 text-[#003135]">
+    <h3 class="text-xl font-semibold mb-2">The Role of Corporate Social Responsibility (CSR) in Modern Business Strategy</h3>
+    <p class="text-sm mb-1">This research paper delves into how businesses integrate CSR initiatives into their operational frameworks, examining the impact on stakeholder trust, long-term profitability, and competitive advantage.</p>
+    <p class="text-sm">I explored real-world CSR implementations using both qualitative interviews and quantitative analysis to highlight how ethical practices are shaping business innovation and consumer engagement in today’s market.</p>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section id="stats" data-aos="fade-up" class="text-center">
+  <h2 class="text-3xl font-bold mb-6 flex items-center justify-center gap-2">
+    <i class="fas fa-chart-bar text-[#0FAA4F]"></i> My Impact
+  </h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div>
+      <div class="text-4xl font-bold text-[#0FAA4F]" data-count="10">0</div>
+      <p class="mt-2">Projects Completed</p>
+    </div>
+    <div>
+      <div class="text-4xl font-bold text-[#0FAA4F]" data-count="8">0</div>
+      <p class="mt-2">Certifications</p>
+    </div>
+    <div>
+      <div class="text-4xl font-bold text-[#0FAA4F]" data-count="250">0</div>
+      <p class="mt-2">Hours of Python</p>
+    </div>
+    <div>
+      <div class="text-4xl font-bold text-[#0FAA4F]" data-count="4">0</div>
+      <p class="mt-2">Tools Mastered</p>
+    </div>
+  </div>
+</section>
+
+<!-- Chat Testimonials Section -->
+<section id="testimonials" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-comments text-[#0FAA4F]"></i> Testimonials
+  </h2>
+  <div class="space-y-4">
+    <div class="bg-white p-4 rounded shadow max-w-lg ml-auto">
+      <p class="text-sm italic text-gray-700">"Rubina's data clarity was crucial in our campaign analysis. We saw actionable results within a week!"</p>
+      <div class="text-right text-xs text-gray-500 mt-1">— Marketing Lead, CSR Insights</div>
+    </div>
+    <div class="bg-[#0FAA4F] text-white p-4 rounded shadow max-w-lg mr-auto">
+      <p class="text-sm italic">"Professional, detail-driven, and very easy to collaborate with. She elevated our Python QA process."</p>
+      <div class="text-left text-xs mt-1">— Supervisor, Oigetit.ai</div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 flex items-center gap-2">
+    <i class="fas fa-comment-alt text-[#0FAA4F]"></i> Testimonials
+  </h2>
+  <div class="bg-white rounded p-4 shadow">
+    <blockquote class="italic text-gray-800">“Rubina’s insights helped us make strategic decisions based on real data.”</blockquote>
+    <footer class="text-right text-sm mt-2">– Supervisor, AI Data Yard</footer>
+
+<!-- Contact Modal -->
+<div id="contactModal" class="fixed inset-0 z-50 bg-black bg-opacity-50 hidden items-center justify-center">
+  <div class="bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative animate__animated animate__zoomIn">
+    <button onclick="toggleModal()" class="absolute top-2 right-2 text-gray-500 hover:text-[#0FAA4F]">
+      <i class="fas fa-times"></i>
+    </button>
+    <h3 class="text-xl font-bold mb-4 text-[#024950]">📬 Quick Contact</h3>
+    <form class="space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded" required>
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded" required>
+      <textarea placeholder="Your Message" rows="4" class="w-full p-3 border rounded" required></textarea>
+      <button type="submit" class="bg-[#0FAA4F] text-white px-6 py-2 rounded hover:bg-[#024950]">Send</button>
+    </form>
+  </div>
+</div>
+<button onclick="toggleModal()" class="fixed bottom-24 right-6 bg-[#0FAA4F] text-white px-4 py-2 rounded-full shadow hover:bg-[#024950] z-50">
+  <i class="fas fa-comment-dots"></i>
+</button>
+
+<!-- Floating Action Widget -->
+<div class="fixed bottom-6 right-6 flex flex-col space-y-2 z-50">
+  <a href="assets/Rubina_resume.pdf" download class="bg-[#0FAA4F] text-white px-4 py-2 rounded-full shadow hover:bg-[#024950] flex items-center justify-center" title="Download Resume">
+    <i class="fas fa-file-download"></i>
+  </a>
+  <a href="mailto:rubina.mahar@gmail.com" class="bg-[#0FAA4F] text-white px-4 py-2 rounded-full shadow hover:bg-[#024950] flex items-center justify-center" title="Email Me">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="bg-[#0FAA4F] text-white px-4 py-2 rounded-full shadow hover:bg-[#024950] animate-bounce" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+</div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-4 flex items-center gap-2">
+    <i class="fas fa-envelope text-[#0FAA4F]"></i> Contact
+  </h2>
+  <form class="space-y-4">
+    <input type="text" placeholder="Your Name" class="w-full p-3 border rounded" required>
+    <input type="email" placeholder="Your Email" class="w-full p-3 border rounded" required>
+    <textarea placeholder="Your Message" rows="4" class="w-full p-3 border rounded" required></textarea>
+    <button type="submit" class="bg-[#0FAA4F] text-white px-6 py-2 rounded hover:bg-[#024950]">Send</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#024950] text-white py-6 text-center mt-12">
+  <p>&copy; 2025 Rubina Ahmed Mahar. All rights reserved.</p>
+  <div class="mt-2 space-x-4">
+    <a href="https://github.com/RubinaAMahar" class="hover:underline" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:rubina.mahar@gmail.com" class="hover:underline"><i class="fas fa-envelope"></i></a>
+  </div>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('[data-count]');
+      const speed = 200;
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const updateCount = () => {
+              const target = +counter.getAttribute('data-count');
+              const count = +counter.innerText;
+              const increment = target / speed;
+              if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 20);
+              } else {
+                counter.innerText = target;
+              }
+            };
+            updateCount();
+            observer.unobserve(counter);
+          }
+        });
+      }, { threshold: 1 });
+      counters.forEach(counter => observer.observe(counter));
+    });
+
+    // Typing Animation
+    document.addEventListener("DOMContentLoaded", function () {
+      const element = document.querySelector(".animate-typing");
+      const text = element.innerText;
+      let index = 0;
+      element.innerText = "";
+      function type() {
+        if (index < text.length) {
+          element.innerText += text.charAt(index);
+          index++;
+          setTimeout(type, 100);
+        }
+      }
+      type();
+    });
+
+    // Theme toggle
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('bg-[#003135]');
+      document.body.classList.toggle('text-white');
+      const allSections = document.querySelectorAll('section');
+      allSections.forEach(section => section.classList.toggle('transition-colors'));
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') toggleTheme();
+    });
+
+    // Scroll progress
+    window.addEventListener('scroll', () => {
+      const progress = document.getElementById('scroll-progress');
+      const scroll = window.scrollY;
+      const height = document.body.scrollHeight - window.innerHeight;
+      const percent = (scroll / height) * 100;
+      progress.style.width = percent + '%';
+    });
+  function toggleModal() {
+  const modal = document.getElementById('contactModal');
+  modal.classList.toggle('hidden');
+  modal.classList.toggle('flex');
+}
+</script>
+</body>
+</html>
